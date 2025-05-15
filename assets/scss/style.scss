@@ -1,0 +1,118 @@
+.reservation_wrap {
+  background: #fff;
+  border-radius: 20px;
+  margin-top: 3.125em;
+}
+
+.text-xxs { font-size: 0.6rem; }
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem !important; }
+.text-md { font-size: 1rem; }
+.text-lg { font-size: 1.25rem; }
+.text-xl { font-size: 1.5rem; }
+
+.reserve-text {
+  color: #bfbfbf;
+}
+
+.is-current {
+  .reserve-text {
+    color: #0659d4;
+  }
+}
+
+.schedule-item {
+  flex: 1;
+  margin-bottom: 0;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.min-80 {
+  min-width: 80px;
+}
+
+.schedule-box {
+  transition: background-color 0.3s;
+
+  &:hover {
+    .schedule-item {
+      cursor: pointer;
+      background-color: #f0f8ff; // お好きな色に
+    }
+  }
+}
+
+.back {
+  display: block;
+  width: 250px;
+  margin: 2em auto;
+}
+
+
+/* スマホ表示（～767px） */
+@media (max-width: 767.98px) {
+  .only-sp {
+    display: block;
+  }
+  .only-pc {
+    display: none;
+  }
+  .sp-flex-column {
+    flex-flow: column;
+  }
+  .sp-w-100 {
+    width: 100%;
+  }
+  .reservation_calender {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    overflow-x: auto;                 /* 横スクロールを許可 */
+    -webkit-overflow-scrolling: touch;/* iOS の慣性スクロール */
+  }
+
+  .calender-item {
+    flex: 0 0 auto;                   /* 子要素幅を自動 or 固定幅に */
+    min-width: 100px;                  /* 好きな最小幅に調整 */
+    margin-bottom: 0;
+    border-top: 1px solid #dee2e6;
+  }
+
+  .sp-title {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .schedule-box {
+    div {
+      p {
+        font-size: 14px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+/* PC表示（768px～） */
+@media (min-width: 768px) {
+  .only-sp {
+    display: none;
+  }
+  .only-pc {
+    display: block;
+  }
+  .pc-w-50 {
+    width: 50%;
+  }
+  .calender-item {
+    flex: 1;
+    margin-bottom: 0;
+    border-top: 1px solid #dee2e6;
+  }
+}
